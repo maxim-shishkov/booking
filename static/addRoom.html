@@ -1,0 +1,13 @@
+{{ template "header" }}
+    <div class="container">
+        <h1> Add room </h1>
+        <form role="form" method="POST" action="/save">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="enter room name" aria-describedby="button" name="name">
+            <div class="input-group-append">
+            </div>
+        </div>
+            <button class="btn btn-primary btn-lg active" type="submit" id="button">create</button>
+        </form>
+    </div>
+{{ template "footer" }}

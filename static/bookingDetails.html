@@ -1,0 +1,12 @@
+{{ template "header" }}
+    <div class="container">
+        {{ range $key, $value := . }}
+                <li  {{if $value.Expired}}
+                    class="list-group-item list-group-item-dark"
+                            {{else}}
+                    class="list-group-item"
+                {{end}}
+                    ><h4>{{$value.Name}}</h4>  {{$value.Time}} <small>{{$value.Date}}</small></li>
+        {{end}}
+    </div>
+{{ template "footer" }}

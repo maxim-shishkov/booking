@@ -1,0 +1,8 @@
+{{ template "header" }}
+   <div class="container">
+        <h1> Error </h1>
+              {{ range $key, $er := . }}
+                  <li class="list-group-item list-group-item-danger"> {{$er}} </li>
+              {{end}}
+    </div>
+{{ template "footer" }}

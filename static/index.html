@@ -1,0 +1,18 @@
+{{ template "header" }}
+    <div class="container">
+        <h1>Room list</h1>
+        <ul class="list-group">
+            {{range $key, $value := .}}
+                    <li class="list-group-item">
+                       <h4> {{.Name}} </h4>
+                        <br>
+                        <a href="/booking/{{$key}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">to book</a>
+                        <a href="/bookingDetails/{{$key}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">detalis</a>
+                        <a href="/delete/{{$key}}" class="btn btn-lg btn-danger" role="button" aria-pressed="true">delete</a>
+                    </li>
+                {{ end }}
+        </ul>
+        <ul class="list-group">
+        </ul>
+    </div>
+{{ template "footer" }}

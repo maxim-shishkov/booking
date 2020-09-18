@@ -1,0 +1,25 @@
+{{ template "header" }}
+    <div class="container">
+        <h1> To book </h1>
+        <form role="form" method="POST" action="/add">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Organaizer</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" name="name">
+        </div>
+        <div class="input-group mb-3">
+            <input type="hidden" name="id" value="{{.}}">
+                <div class="input-group-prepend"><span class="input-group-text" >date</span></div>
+            <input name="date" type="date" class="form-control" placeholder="calendar">
+                <div class="input-group-prepend"><span class="input-group-text" >hour</span></div>
+            <input name="hour" type="number" class="form-control" value="0" min="0" max="30" step="1">
+                <div class="input-group-prepend"><span class="input-group-text" >minut</span></div>
+            <input name="minut" type="number" class="form-control" value="0" min="0" max="30" step="30">
+        </div>
+            <button class="btn btn-primary btn-lg active" type="submit" id="button">create</button>
+        </form>
+    </div>
+
+{{ template "footer" }}
